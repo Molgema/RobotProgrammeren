@@ -1,0 +1,3 @@
+MODULE CalibData
+    PERS tooldata tSpintec:=[TRUE,[[31.793,0,229.639],[0.945518576,0,0.325568154,0]],[1,[-73.579,279.02,0],[1,0,0,0],0,0,0]];
+ENDMODULE

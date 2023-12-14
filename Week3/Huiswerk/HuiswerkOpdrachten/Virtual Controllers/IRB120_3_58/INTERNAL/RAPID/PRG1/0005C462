@@ -1,0 +1,26 @@
+MODULE MainModule
+    !***********************************************************
+    !
+    ! Module:  MainModule
+    !
+    ! Description:
+    !   <Insert description here>
+    !
+    ! Author: niels
+    !
+    ! Version: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedure main
+    !
+    !   This is the entry point of your program
+    !
+    !***********************************************************
+    PROC main()
+        !Add your code here
+    ENDPROC
+ENDMODULE
