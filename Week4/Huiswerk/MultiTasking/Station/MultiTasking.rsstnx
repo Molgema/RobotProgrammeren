@@ -7480,10 +7480,10 @@
       <ClipPlane ID="-1" />
       <JointValues>
         <Double Value="0" />
-        <Double Value="8.87609559185876E-08" />
-        <Double Value="-1.10222480032007E-07" />
         <Double Value="0" />
-        <Double Value="0.523598790168762" />
+        <Double Value="0" />
+        <Double Value="0" />
+        <Double Value="0.523598775598299" />
         <Double Value="0" />
       </JointValues>
       <CalibFrames />
@@ -7646,10 +7646,10 @@
     <MechanismLinkInstance ID="2258" Name="Link2" Parent="2255" PickingEnabled="true" Detectable="true" PhysicsMotionControl="0">
       <Definition ID="15" DocID="1" />
       <Transform>
-        <RowX X="0.999999999999996" Y="0" Z="-8.87609594100708E-08" W="0" />
+        <RowX X="1" Y="0" Z="0" W="0" />
         <RowY X="0" Y="1" Z="0" W="0" />
-        <RowZ X="8.87609594100708E-08" Y="0" Z="0.999999999999996" W="0" />
-        <RowT X="-2.57406782289205E-08" Y="0" Z="0" W="1" />
+        <RowZ X="0" Y="0" Z="1" W="0" />
+        <RowT X="0" Y="0" Z="0" W="1" />
       </Transform>
       <Source Value="" />
       <SourceFileTime HighPart="0" LowPart="0" />
@@ -7675,10 +7675,10 @@
     <MechanismLinkInstance ID="2259" Name="Link3" Parent="2255" PickingEnabled="true" Detectable="true" PhysicsMotionControl="0">
       <Definition ID="16" DocID="1" />
       <Transform>
-        <RowX X="1" Y="0" Z="2.14615206219364E-08" W="0" />
+        <RowX X="1" Y="0" Z="0" W="0" />
         <RowY X="0" Y="1" Z="0" W="0" />
-        <RowZ X="-2.14615206219364E-08" Y="0" Z="1" W="0" />
-        <RowT X="3.59839105890035E-08" Y="0" Z="0" W="1" />
+        <RowZ X="0" Y="0" Z="1" W="0" />
+        <RowT X="0" Y="0" Z="0" W="1" />
       </Transform>
       <Source Value="" />
       <SourceFileTime HighPart="0" LowPart="0" />
@@ -7704,10 +7704,10 @@
     <MechanismLinkInstance ID="2260" Name="Link4" Parent="2255" PickingEnabled="true" Detectable="true" PhysicsMotionControl="0">
       <Definition ID="17" DocID="1" />
       <Transform>
-        <RowX X="1" Y="0" Z="2.14615206219364E-08" W="0" />
+        <RowX X="1" Y="0" Z="0" W="0" />
         <RowY X="0" Y="1" Z="0" W="0" />
-        <RowZ X="-2.14615206219364E-08" Y="0" Z="1" W="0" />
-        <RowT X="3.59839106289783E-08" Y="0" Z="0" W="1" />
+        <RowZ X="0" Y="0" Z="1" W="0" />
+        <RowT X="0" Y="0" Z="0" W="1" />
       </Transform>
       <Source Value="" />
       <SourceFileTime HighPart="0" LowPart="0" />
@@ -7733,10 +7733,10 @@
     <MechanismLinkInstance ID="2261" Name="Link5" Parent="2255" PickingEnabled="true" Detectable="true" PhysicsMotionControl="0">
       <Definition ID="18" DocID="1" />
       <Transform>
-        <RowX X="0.866025407229966" Y="0" Z="-0.499999994032172" W="0" />
+        <RowX X="0.866025403784435" Y="0" Z="-0.500000000000006" W="0" />
         <RowY X="0" Y="1" Z="0" W="0" />
-        <RowZ X="0.499999994032172" Y="0" Z="0.866025407229966" W="0" />
-        <RowT X="-0.274539646760565" Y="0" Z="0.235403998124216" W="1" />
+        <RowZ X="0.500000000000006" Y="0" Z="0.866025403784435" W="0" />
+        <RowT X="-0.274539671942902" Y="0" Z="0.235403995615807" W="1" />
       </Transform>
       <Source Value="" />
       <SourceFileTime HighPart="0" LowPart="0" />
@@ -7762,10 +7762,10 @@
     <MechanismLinkInstance ID="2262" Name="Link6" Parent="2255" PickingEnabled="true" Detectable="true" PhysicsMotionControl="0">
       <Definition ID="19" DocID="1" />
       <Transform>
-        <RowX X="0.866025407229966" Y="0" Z="-0.499999994032172" W="0" />
+        <RowX X="0.866025403784435" Y="0" Z="-0.500000000000006" W="0" />
         <RowY X="0" Y="1" Z="0" W="0" />
-        <RowZ X="0.499999994032172" Y="0" Z="0.866025407229966" W="0" />
-        <RowT X="-0.274539646760565" Y="0" Z="0.235403998124216" W="1" />
+        <RowZ X="0.500000000000006" Y="0" Z="0.866025403784435" W="0" />
+        <RowT X="-0.274539671942902" Y="0" Z="0.235403995615807" W="1" />
       </Transform>
       <Source Value="" />
       <SourceFileTime HighPart="0" LowPart="0" />
@@ -7860,9 +7860,9 @@
       <Robtarget ID="2295" />
       <Workobject ID="1191" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999986" Y="-1.99999910959992E-08" Z="1.68000001059994E-07" W="0" />
-        <RowY X="-2.00000089039992E-08" Y="0.999999999999994" Z="-1.05999998319995E-07" W="0" />
-        <RowZ X="-1.67999998939994E-07" Y="-1.06000001679995E-07" Z="-0.99999999999998" W="0" />
+        <RowX X="-0.999999999999986" Y="-1.99999910959989E-08" Z="1.68000001059992E-07" W="0" />
+        <RowY X="-2.00000089039989E-08" Y="0.999999999999994" Z="-1.05999998319993E-07" W="0" />
+        <RowZ X="-1.67999998939992E-07" Y="-1.06000001679993E-07" Z="-0.99999999999998" W="0" />
         <RowT X="-0.285571688851" Y="-0.254029837254" Z="0.381276356624" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
