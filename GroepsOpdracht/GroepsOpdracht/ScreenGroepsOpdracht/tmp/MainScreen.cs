@@ -33,6 +33,8 @@ namespace ScreenGroepsOpdracht
         
         private ABB.Robotics.Tps.Windows.Forms.BarGraph barGraph1;
         
+        private ABB.Robotics.Tps.Windows.Forms.Led led1;
+        
         private ABB.Robotics.Tps.Windows.Forms.TpsLabel tpsLabel4;
         
         public MainScreen()
@@ -51,6 +53,7 @@ namespace ScreenGroepsOpdracht
             this.tpsLabel3 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.barGraph1 = new ABB.Robotics.Tps.Windows.Forms.BarGraph();
             this.tpsLabel4 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.led1 = new ABB.Robotics.Tps.Windows.Forms.Led();
             this.SuspendLayout();
             // 
             // button1
@@ -123,7 +126,7 @@ namespace ScreenGroepsOpdracht
             // 
             this.barGraph1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.barGraph1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.barGraph1.Location = new System.Drawing.Point(259, 186);
+            this.barGraph1.Location = new System.Drawing.Point(211, 76);
             this.barGraph1.Name = "barGraph1";
             this.barGraph1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.barGraph1.Size = new System.Drawing.Size(150, 50);
@@ -132,15 +135,26 @@ namespace ScreenGroepsOpdracht
             // 
             this.tpsLabel4.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.tpsLabel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tpsLabel4.Location = new System.Drawing.Point(259, 156);
+            this.tpsLabel4.Location = new System.Drawing.Point(238, 46);
             this.tpsLabel4.Multiline = true;
             this.tpsLabel4.Name = "tpsLabel4";
             this.tpsLabel4.Size = new System.Drawing.Size(100, 24);
             this.tpsLabel4.Title = "Progress";
             // 
+            // led1
+            // 
+            this.led1.DataBindings.Add(new System.Windows.Forms.Binding("Value", new ABB.Robotics.ScreenMaker.Windows.Forms.SingleBindingSource(new ABB.Robotics.DataBinding.RapidDataObject("T_ROB1", "MainModule", "sockErrorConFlag")), "Value", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.led1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.led1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.led1.Location = new System.Drawing.Point(415, 46);
+            this.led1.Name = "led1";
+            this.led1.Size = new System.Drawing.Size(221, 36);
+            this.led1.Text = "ERR_SOCK_TIMEOUT";
+            // 
             // MainScreen
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.led1);
             this.Controls.Add(this.tpsLabel4);
             this.Controls.Add(this.barGraph1);
             this.Controls.Add(this.tpsLabel3);
@@ -157,6 +171,7 @@ namespace ScreenGroepsOpdracht
             this.Controls.SetChildIndex(this.tpsLabel3, 0);
             this.Controls.SetChildIndex(this.barGraph1, 0);
             this.Controls.SetChildIndex(this.tpsLabel4, 0);
+            this.Controls.SetChildIndex(this.led1, 0);
             this.ResumeLayout(false);
         }
         #endregion
@@ -181,9 +196,6 @@ namespace ScreenGroepsOpdracht
             {
                 // Calling SignalSet
                 ((ABB.Robotics.Controllers.IOSystemDomain.DigitalSignal)(ABB.Robotics.ScreenMaker.Windows.Forms.DataManager.GetSignal(this, "IOSYSTEM/SIGNALS/stopDO"))).Set();
-                // Calling RapidDataWrite
-                ABB.Robotics.ScreenMaker.Base.IApplicationVariable write_1 = this.ScreenServices.ApplicationVariables["stateStop"];
-                ABB.Robotics.ScreenMaker.Windows.Forms.DataManager.GetRapidData(this, "RAPID/T_ROB1/MainModule/state").Value = ((ABB.Robotics.Controllers.RapidDomain.IRapidData)(write_1.Value));
             }
             catch (System.Exception ex)
             {

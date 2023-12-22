@@ -2,7 +2,7 @@ MODULE MainModule
     PERS bool startsync; 
     PERS String state; 
     VAR socketdev my_socket; 
-    PERS num sockErrorConFlag := 1; 
+    PERS num sockErrorConFlag := 0; 
     
     PROC main()
         WaitUntil startsync;      
@@ -16,7 +16,8 @@ MODULE MainModule
         VAR string YellowOff:="20";
         VAR string GreenOn:="31";
         VAR string GreenOff:="30";
-        VAR num blinkTime := 0.1; 
+        VAR num noBlink := 0; 
+        VAR num blinkTime := 0.05; 
         
         TEST stateRob
             CASE "Start" :
@@ -24,19 +25,19 @@ MODULE MainModule
                 SetLamp GreenOff, blinkTime;
                 
                 IF stateRob <> "Start" THEN 
-                    SetLamp GreenOff, blinkTime; 
+                    SetLamp GreenOff, noBlink; 
                 ENDIF
             CASE "Stop" :
                 SetLamp YellowOn, blinkTime;
                 SetLamp YellowOff, blinkTime;
                 
                 IF stateRob <> "Stop" THEN 
-                    SetLamp YellowOff, blinkTime; 
+                    SetLamp YellowOff, noBlink; 
                 ENDIF
             CASE "Idle":
-                    SetLamp RedOn, blinkTime;
+                    SetLamp RedOn, noBlink;
                     IF stateRob <> "Idle" THEN 
-                        SetLamp RedOff, blinkTime; 
+                        SetLamp RedOff, noBlink; 
                     ENDIF
             DEFAULT:
         ENDTEST

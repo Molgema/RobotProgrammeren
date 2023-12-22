@@ -21,6 +21,7 @@ MODULE MainModule
     PERS String state := "Idle";
     PERS bool startsync := TRUE;
     PERS robtarget currentpos; 
+    PERS num sockErrorConFlag;
     VAR intnum intReset;
     VAR intnum intStop;
     VAR num initRob := 0; 
@@ -28,9 +29,10 @@ MODULE MainModule
     PROC main()
         IF initRob = 0 THEN
             initDO;
-            setupTrap;
-            state := "IDLE"; 
+            state := "Idle"; 
             startsync := TRUE; 
+            sockErrorConFlag := 0; 
+            setupTrap;     
             RestoPath; 
             initRob := 1; 
         ENDIF 
@@ -56,12 +58,9 @@ MODULE MainModule
         WHILE state = "Stop"  DO
         ENDWHILE
         
-        IF state = "Start" THEN
+        IF state = "Start" THEN 
             RestoPath;
             StartMove; 
-        !ElSEIF state = "Reset" THEN
-        !    MoveAbsJ JointTarget_1,v500,fine,MyTool\WObj:=wTable;
-        !    ExitCycle; 
         ENDIF
     ENDTRAP
     

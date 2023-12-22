@@ -45,6 +45,9 @@ MODULE MainModule
             state := "Idle"; 
         DEFAULT:
         ENDTEST
+        
+        !ERROR(ERR_SOCK_TIMEOUT)
+        !    Stop; 
     ENDPROC
     
     TRAP trapStop

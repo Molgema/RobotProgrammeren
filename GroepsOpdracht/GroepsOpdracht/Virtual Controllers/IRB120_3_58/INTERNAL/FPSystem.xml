@@ -2,6 +2,11 @@
 <!--Comments: Settings for the FlexPendant.-->
 <FP>
   <USER name="">
+    <DATA id="ViewInManFull">
+      <PROP name="text" value="PARAM_TXT_VIEWINMANFULL" />
+      <PROP name="dll" value="" />
+      <PROP name="type" value="" />
+    </DATA>
     <DATA id="ViewInAuto">
       <PROP name="text" value="PARAM_TXT_VIEWINAUTO" />
       <PROP name="dll" value="TpsViewProductionWnd.dll" />
@@ -40,8 +45,8 @@
       <PROP name="HideDeclarations" value="False" />
       <PROP name="ProgramPath" value="C:/Users/niels/Desktop/Programmeren/Elektrotechniek/Jaar2/RobotProgrammeren/GroepsOpdracht/GroepsOpdracht/Virtual Controllers/IRB120_3_58/ProgRob1/" />
     </DATA>
-    <DATA id="UserSettings">
-      <PROP name="RapidEditorFontIndex" value="5" />
+    <DATA id="ABB.Robotics.Tps.FileExplorer.TpsViewFileExplorer">
+      <PROP name="LASTPATH" value="C:/Users/niels/Desktop/Programmeren/Elektrotechniek/Jaar2/RobotProgrammeren/GroepsOpdracht/GroepsOpdracht/Virtual Controllers/IRB120_3_58/HOME/" />
     </DATA>
     <DATA id="Show">
       <PROP name="default" value="CtrlName" />
@@ -64,10 +69,8 @@
       <PROP name="pressed" value="" />
       <PROP name="target" value="" />
     </DATA>
-    <DATA id="ViewInManFull">
-      <PROP name="text" value="PARAM_TXT_VIEWINMANFULL" />
-      <PROP name="dll" value="" />
-      <PROP name="type" value="" />
+    <DATA id="UserSettings">
+      <PROP name="RapidEditorFontIndex" value="5" />
     </DATA>
   </USER>
 </FP>

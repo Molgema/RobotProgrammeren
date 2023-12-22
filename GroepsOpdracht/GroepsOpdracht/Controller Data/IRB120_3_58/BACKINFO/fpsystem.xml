@@ -45,6 +45,9 @@
       <PROP name="HideDeclarations" value="False" />
       <PROP name="ProgramPath" value="C:/Users/niels/Desktop/Programmeren/Elektrotechniek/Jaar2/RobotProgrammeren/GroepsOpdracht/GroepsOpdracht/Virtual Controllers/IRB120_3_58/ProgRob1/" />
     </DATA>
+    <DATA id="ABB.Robotics.Tps.FileExplorer.TpsViewFileExplorer">
+      <PROP name="LASTPATH" value="C:/Users/niels/Desktop/Programmeren/Elektrotechniek/Jaar2/RobotProgrammeren/GroepsOpdracht/GroepsOpdracht/Virtual Controllers/IRB120_3_58/HOME/" />
+    </DATA>
     <DATA id="Show">
       <PROP name="default" value="CtrlName" />
     </DATA>
