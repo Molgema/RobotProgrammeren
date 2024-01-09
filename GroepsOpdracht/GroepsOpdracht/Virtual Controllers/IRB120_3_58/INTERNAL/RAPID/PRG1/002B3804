@@ -20,13 +20,10 @@ MODULE MainModule
     CONST robtarget Target_160:=[[0.000033988,93.749966996,-0.000052305],[-0.000000054,0.000000005,1,-0.000000025],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     
     PERS String state := "Idle";
-    PERS bool startsync := TRUE;
+    
+    PERS bool startsync := FALSE;
     PERS robtarget currentpos; 
     PERS num sockErrorConFlag;
-    VAR intnum intReset;
-    VAR intnum intStop;
-    VAR num initRob := 0;
-    VAR clock timer; 
     PERS num nFlexdata{3}; 
     
     PROC main()
@@ -60,9 +57,9 @@ MODULE MainModule
     TRAP trapStop
         state := "Stop";
         initDO;
-        
+         
         StopMove\Quick; 
-        currentpos:=CRobT(\Tool:=MyTool \WObj:=wTable);
+        Rob1.current_p := CRobT(\Tool:=MyTool \WObj:=wTable);
         StorePath; 
         
         WHILE state = "Stop"  DO
