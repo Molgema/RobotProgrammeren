@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PIMDocument DocumentType="Station" Version="6" SaveVersion="23.3.10550.0" xmlns="urn:abb-robotics-pim">
+<PIMDocument DocumentType="Station" Version="6" SaveVersion="23.4.10609.1" xmlns="urn:abb-robotics-pim">
   <DocumentHistory />
   <RootObject ID="1" />
   <Objects>
@@ -3901,7 +3901,7 @@
     </TaskSimulationConfiguration>
     <IRC5Controller ID="1186" Name="" Parent="9" StopAtBreakpoints="true">
       <UniqueId Value="{76612cb6-e35e-4d47-b4ae-ac341e58f19e}" />
-      <SystemIdentity Value="{B820F0AF-3021-400D-A54D-A43A15DF350D}" />
+      <SystemIdentity Value="{D7D8792F-9CF9-44C4-B5E1-4765330F258B}" />
       <RAPIDData ID="1187" />
       <MechanicalUnits>
         <ObjectRef ID="2253" />
@@ -3980,6 +3980,7 @@
         <ObjectRef ID="2571" />
         <ObjectRef ID="2574" />
         <ObjectRef ID="2577" />
+        <ObjectRef ID="2595" />
       </Declarations>
       <Targets>
         <ObjectRef ID="2275" />
@@ -3998,6 +3999,7 @@
         <ObjectRef ID="2573" />
         <ObjectRef ID="2576" />
         <ObjectRef ID="2579" />
+        <ObjectRef ID="2597" />
       </Targets>
       <DefinedRoutineDeclarations>
         <ObjectRef ID="1193" />
@@ -8009,6 +8011,7 @@
     <PathProcedureDeclaration ID="2278" Name="Path_10" Parent="1188" ShowName="false" ZoneVisualization="0" ShowSpeeds="false">
       <DeclarationInfo ID="2279" />
       <RoutineCalls>
+        <ObjectRef ID="2581" />
         <ObjectRef ID="2295" />
         <ObjectRef ID="2310" />
         <ObjectRef ID="2340" />
@@ -8127,9 +8130,9 @@
       <Robtarget ID="2324" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999988" Y="-5.99999878399941E-09" Z="1.52000000047983E-07" W="0" />
-        <RowY X="-6.00000121599941E-09" Y="1" Z="-1.59999995439983E-08" W="0" />
-        <RowZ X="-1.51999999951983E-07" Y="-1.60000004559983E-08" Z="-0.999999999999988" W="0" />
+        <RowX X="-0.999999999999988" Y="-5.99999878399927E-09" Z="1.52000000047979E-07" W="0" />
+        <RowY X="-6.00000121599927E-09" Y="1" Z="-1.59999995439979E-08" W="0" />
+        <RowZ X="-1.51999999951979E-07" Y="-1.60000004559979E-08" Z="-0.999999999999988" W="0" />
         <RowT X="0.062500002181" Y="-1.8827E-08" Z="-7.846E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8159,9 +8162,9 @@
       <Robtarget ID="2327" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999994" Y="3.80000005299982E-08" Z="1.05999999809992E-07" W="0" />
-        <RowY X="3.79999994699982E-08" Y="0.999999999999999" Z="-1.00000020139995E-08" W="0" />
-        <RowZ X="-1.06000000189992E-07" Y="-9.99999798599949E-09" Z="-0.999999999999994" W="0" />
+        <RowX X="-0.999999999999994" Y="3.80000005299978E-08" Z="1.0599999980999E-07" W="0" />
+        <RowY X="3.79999994699978E-08" Y="0.999999999999999" Z="-1.00000020139994E-08" W="0" />
+        <RowZ X="-1.0600000018999E-07" Y="-9.99999798599937E-09" Z="-0.999999999999994" W="0" />
         <RowT X="0.125000019433" Y="-2.2385E-08" Z="-5.8098E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8191,9 +8194,9 @@
       <Robtarget ID="2330" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999994" Y="2.59999977739984E-08" Z="1.06000000545992E-07" W="0" />
-        <RowY X="2.60000022259984E-08" Y="0.999999999999999" Z="4.19999986219975E-08" W="0" />
-        <RowZ X="-1.05999999453992E-07" Y="4.20000013779975E-08" Z="-0.999999999999994" W="0" />
+        <RowX X="-0.999999999999994" Y="2.5999997773998E-08" Z="1.0600000054599E-07" W="0" />
+        <RowY X="2.6000002225998E-08" Y="0.999999999999999" Z="4.19999986219969E-08" W="0" />
+        <RowZ X="-1.0599999945399E-07" Y="4.20000013779969E-08" Z="-0.999999999999994" W="0" />
         <RowT X="0.187500022936" Y="8.5E-10" Z="-6.2666E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8223,9 +8226,9 @@
       <Robtarget ID="2333" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999992" Y="1.39999988839991E-08" Z="1.24000000125992E-07" W="0" />
-        <RowY X="1.40000011159991E-08" Y="1" Z="1.79999991319991E-08" W="0" />
-        <RowZ X="-1.23999999873992E-07" Y="1.80000008679991E-08" Z="-0.999999999999992" W="0" />
+        <RowX X="-0.999999999999992" Y="1.39999988839989E-08" Z="1.2400000012599E-07" W="0" />
+        <RowY X="1.40000011159989E-08" Y="1" Z="1.79999991319989E-08" W="0" />
+        <RowZ X="-1.2399999987399E-07" Y="1.80000008679989E-08" Z="-0.999999999999992" W="0" />
         <RowT X="0.250000011297" Y="-8.337E-09" Z="-6.5551E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8255,9 +8258,9 @@
       <Robtarget ID="2336" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999993" Y="-1.59999994299991E-08" Z="1.14000000079992E-07" W="0" />
-        <RowY X="-1.60000005699991E-08" Y="1" Z="-9.99999908799924E-09" W="0" />
-        <RowZ X="-1.13999999919992E-07" Y="-1.00000009119992E-08" Z="-0.999999999999994" W="0" />
+        <RowX X="-0.999999999999993" Y="-1.59999994299989E-08" Z="1.1400000007999E-07" W="0" />
+        <RowY X="-1.60000005699989E-08" Y="1" Z="-9.99999908799904E-09" W="0" />
+        <RowZ X="-1.1399999991999E-07" Y="-1.0000000911999E-08" Z="-0.999999999999994" W="0" />
         <RowT X="0.250000020519" Y="0.093749996566" Z="-6.5816E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8797,9 +8800,9 @@
       <Robtarget ID="2550" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999994" Y="0" Z="1.09999999999992E-07" W="0" />
+        <RowX X="-0.999999999999994" Y="0" Z="1.0999999999999E-07" W="0" />
         <RowY X="0" Y="1" Z="0" W="0" />
-        <RowZ X="-1.09999999999992E-07" Y="0" Z="-0.999999999999994" W="0" />
+        <RowZ X="-1.0999999999999E-07" Y="0" Z="-0.999999999999994" W="0" />
         <RowT X="0.250000023135" Y="0.1875" Z="-6.4444E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8829,9 +8832,9 @@
       <Robtarget ID="2553" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999993" Y="1.59999994299991E-08" Z="1.14000000079992E-07" W="0" />
-        <RowY X="1.60000005699991E-08" Y="1" Z="9.99999908799924E-09" W="0" />
-        <RowZ X="-1.13999999919992E-07" Y="1.00000009119992E-08" Z="-0.999999999999994" W="0" />
+        <RowX X="-0.999999999999993" Y="1.59999994299989E-08" Z="1.1400000007999E-07" W="0" />
+        <RowY X="1.60000005699989E-08" Y="1" Z="9.99999908799904E-09" W="0" />
+        <RowZ X="-1.1399999991999E-07" Y="1.0000000911999E-08" Z="-0.999999999999994" W="0" />
         <RowT X="0.250000020519" Y="0.281250003434" Z="-6.5816E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8861,9 +8864,9 @@
       <Robtarget ID="2556" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999992" Y="-1.39999988839991E-08" Z="1.24000000125992E-07" W="0" />
-        <RowY X="-1.40000011159991E-08" Y="1" Z="-1.79999991319991E-08" W="0" />
-        <RowZ X="-1.23999999873992E-07" Y="-1.80000008679991E-08" Z="-0.999999999999992" W="0" />
+        <RowX X="-0.999999999999992" Y="-1.39999988839989E-08" Z="1.2400000012599E-07" W="0" />
+        <RowY X="-1.40000011159989E-08" Y="1" Z="-1.79999991319989E-08" W="0" />
+        <RowZ X="-1.2399999987399E-07" Y="-1.80000008679989E-08" Z="-0.999999999999992" W="0" />
         <RowT X="0.250000011297" Y="0.375000008337" Z="-6.5551E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8893,9 +8896,9 @@
       <Robtarget ID="2559" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999994" Y="-2.59999977739984E-08" Z="1.06000000545992E-07" W="0" />
-        <RowY X="-2.60000022259984E-08" Y="0.999999999999999" Z="-4.19999986219975E-08" W="0" />
-        <RowZ X="-1.05999999453992E-07" Y="-4.20000013779975E-08" Z="-0.999999999999994" W="0" />
+        <RowX X="-0.999999999999994" Y="-2.5999997773998E-08" Z="1.0600000054599E-07" W="0" />
+        <RowY X="-2.6000002225998E-08" Y="0.999999999999999" Z="-4.19999986219969E-08" W="0" />
+        <RowZ X="-1.0599999945399E-07" Y="-4.20000013779969E-08" Z="-0.999999999999994" W="0" />
         <RowT X="0.187500022936" Y="0.37499999915" Z="-6.2666E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8925,9 +8928,9 @@
       <Robtarget ID="2562" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999994" Y="-3.80000005299982E-08" Z="1.05999999809992E-07" W="0" />
-        <RowY X="-3.79999994699982E-08" Y="0.999999999999999" Z="1.00000020139995E-08" W="0" />
-        <RowZ X="-1.06000000189992E-07" Y="9.99999798599949E-09" Z="-0.999999999999994" W="0" />
+        <RowX X="-0.999999999999994" Y="-3.80000005299978E-08" Z="1.0599999980999E-07" W="0" />
+        <RowY X="-3.79999994699978E-08" Y="0.999999999999999" Z="1.00000020139994E-08" W="0" />
+        <RowZ X="-1.0600000018999E-07" Y="9.99999798599937E-09" Z="-0.999999999999994" W="0" />
         <RowT X="0.125000019433" Y="0.375000022385" Z="-5.8098E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8957,9 +8960,9 @@
       <Robtarget ID="2565" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999988" Y="5.99999878399941E-09" Z="1.52000000047983E-07" W="0" />
-        <RowY X="6.00000121599941E-09" Y="1" Z="1.59999995439983E-08" W="0" />
-        <RowZ X="-1.51999999951983E-07" Y="1.60000004559983E-08" Z="-0.999999999999988" W="0" />
+        <RowX X="-0.999999999999988" Y="5.99999878399927E-09" Z="1.52000000047979E-07" W="0" />
+        <RowY X="6.00000121599927E-09" Y="1" Z="1.59999995439979E-08" W="0" />
+        <RowZ X="-1.51999999951979E-07" Y="1.60000004559979E-08" Z="-0.999999999999988" W="0" />
         <RowT X="0.062500002181" Y="0.375000018827" Z="-7.846E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -8989,9 +8992,9 @@
       <Robtarget ID="2568" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999991" Y="-8.19999962199939E-08" Z="1.08000002869991E-07" W="0" />
-        <RowY X="-8.20000037799938E-08" Y="0.999999999999994" Z="-6.99999955719948E-08" W="0" />
-        <RowZ X="-1.07999997129991E-07" Y="-7.00000044279948E-08" Z="-0.999999999999992" W="0" />
+        <RowX X="-0.999999999999991" Y="-8.19999962199925E-08" Z="1.08000002869989E-07" W="0" />
+        <RowY X="-8.20000037799924E-08" Y="0.999999999999994" Z="-6.99999955719936E-08" W="0" />
+        <RowZ X="-1.07999997129989E-07" Y="-7.00000044279936E-08" Z="-0.999999999999992" W="0" />
         <RowT X="2.0608E-08" Y="0.375000011918" Z="-7.0489E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -9021,9 +9024,9 @@
       <Robtarget ID="2571" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999994" Y="-1.00000026999992E-08" Z="1.07999999749992E-07" W="0" />
-        <RowY X="-9.99999729999924E-09" Y="0.999999999999999" Z="5.00000005399967E-08" W="0" />
-        <RowZ X="-1.08000000249992E-07" Y="4.99999994599967E-08" Z="-0.999999999999993" W="0" />
+        <RowX X="-0.999999999999994" Y="-1.0000002699999E-08" Z="1.0799999974999E-07" W="0" />
+        <RowY X="-9.99999729999904E-09" Y="0.999999999999999" Z="5.00000005399959E-08" W="0" />
+        <RowZ X="-1.0800000024999E-07" Y="4.99999994599959E-08" Z="-0.999999999999993" W="0" />
         <RowT X="3.3988E-08" Y="0.281250033004" Z="-5.2305E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -9053,9 +9056,9 @@
       <Robtarget ID="2574" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999995" Y="0" Z="1.03999999999992E-07" W="0" />
+        <RowX X="-0.999999999999995" Y="0" Z="1.0399999999999E-07" W="0" />
         <RowY X="0" Y="1" Z="0" W="0" />
-        <RowZ X="-1.03999999999992E-07" Y="0" Z="-0.999999999999995" W="0" />
+        <RowZ X="-1.0399999999999E-07" Y="0" Z="-0.999999999999995" W="0" />
         <RowT X="4.9627E-08" Y="0.1875" Z="-3.7155E-08" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
@@ -9085,16 +9088,82 @@
       <Robtarget ID="2577" />
       <Workobject ID="2262" />
       <ReferenceFrame>
-        <RowX X="-0.999999999999994" Y="1.00000026999992E-08" Z="1.07999999749992E-07" W="0" />
-        <RowY X="9.99999729999924E-09" Y="0.999999999999999" Z="-5.00000005399967E-08" W="0" />
-        <RowZ X="-1.08000000249992E-07" Y="-4.99999994599967E-08" Z="-0.999999999999993" W="0" />
+        <RowX X="-0.999999999999994" Y="1.0000002699999E-08" Z="1.0799999974999E-07" W="0" />
+        <RowY X="9.99999729999904E-09" Y="0.999999999999999" Z="-5.00000005399959E-08" W="0" />
+        <RowZ X="-1.0800000024999E-07" Y="-4.99999994599959E-08" Z="-0.999999999999993" W="0" />
         <RowT X="3.3988E-08" Y="0.093749966996" Z="-5.2305E-08" W="1" />
+      </ReferenceFrame>
+      <Color Red="0" Green="0" Blue="0" Alpha="0" />
+    </Target>
+    <MoveInstructionCall ID="2581" Name="MoveJ" Parent="2278" Thickness="2" Reachable="1">
+      <ArgumentList ID="2582" />
+      <GroupName Value="Move" />
+      <TemplateGroupName Value="Default" />
+      <Color Red="1" Green="1" Blue="0" Alpha="1" />
+    </MoveInstructionCall>
+    <RoutineArgumentList ID="2582" Name="" Parent="2581">
+      <RoutineArguments>
+        <ObjectRef ID="2583" />
+        <ObjectRef ID="2584" />
+        <ObjectRef ID="2585" />
+        <ObjectRef ID="2586" />
+        <ObjectRef ID="2587" />
+        <ObjectRef ID="2588" />
+        <ObjectRef ID="2589" />
+        <ObjectRef ID="2590" />
+        <ObjectRef ID="2591" />
+        <ObjectRef ID="2592" />
+        <ObjectRef ID="2593" />
+        <ObjectRef ID="2594" />
+      </RoutineArguments>
+    </RoutineArgumentList>
+    <RoutineArgument ID="2583" Name="Conc" Parent="2582" Enabled="false" />
+    <RoutineArgument ID="2584" Name="ToPoint" Parent="2582" Value="Target_Clock" />
+    <RoutineArgument ID="2585" Name="ID" Parent="2582" Enabled="false" />
+    <RoutineArgument ID="2586" Name="Speed" Parent="2582" Value="v1000" />
+    <RoutineArgument ID="2587" Name="V" Parent="2582" Enabled="false" />
+    <RoutineArgument ID="2588" Name="T" Parent="2582" Enabled="false" />
+    <RoutineArgument ID="2589" Name="Zone" Parent="2582" Value="z100" />
+    <RoutineArgument ID="2590" Name="Z" Parent="2582" Enabled="false" />
+    <RoutineArgument ID="2591" Name="Inpos" Parent="2582" Enabled="false" />
+    <RoutineArgument ID="2592" Name="Tool" Parent="2582" Value="MyTool" />
+    <RoutineArgument ID="2593" Name="WObj" Parent="2582" Value="wTable" />
+    <RoutineArgument ID="2594" Name="TLoad" Parent="2582" Enabled="false" />
+    <DataDeclaration ID="2595" Name="Target_Clock" Parent="1188" StorageType="0" DataType="robtarget" IsInline="false" FrameSize="0.075" ShowName="false" Dimension1="0" Dimension2="0" Dimension3="0">
+      <Attributes>
+        <Attribute Key="ConfigDataAssigned">
+          <Value>
+            <Integer Value="1" />
+          </Value>
+        </Attribute>
+        <Attribute Key="jointvalues">
+          <Value>
+            <String Value="0,4.09232612241794E-08,-1.4339617848691E-07,6.93889390390723E-18,0,-6.93889390390723E-18" />
+          </Value>
+        </Attribute>
+      </Attributes>
+      <DeclarationInfo ID="2596" />
+      <RoutineName Value="" />
+      <InitialExpression Value="[[403.638935148,187.5,398.207368981],[0.438371147,0,0.898794046,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]]" />
+    </DataDeclaration>
+    <RAPIDDeclarationInfo ID="2596" Name="" Parent="2595" Local="false" EnableSync="true">
+      <TaskName Value="" />
+      <ModuleName Value="Module1" />
+    </RAPIDDeclarationInfo>
+    <Target ID="2597" Name="Target_Clock" Parent="1188" MultiColored="true" ApproachAxis="2" FrameSize="0.05" ShowReferenceFrame="false" ShowName="false">
+      <Robtarget ID="2595" />
+      <Workobject ID="2262" />
+      <ReferenceFrame>
+        <RowX X="-0.615661474820193" Y="0" Z="-0.788010754001635" W="0" />
+        <RowY X="0" Y="1" Z="0" W="0" />
+        <RowZ X="0.788010754001635" Y="0" Z="-0.615661474820193" W="0" />
+        <RowT X="0.403638935148" Y="0.1875" Z="0.398207368981" W="1" />
       </ReferenceFrame>
       <Color Red="0" Green="0" Blue="0" Alpha="0" />
     </Target>
   </Objects>
   <ReferencedDocuments>
-    <DocRef ID="1" DocumentType="ComponentLibrary" Location="%ABB.RobotStudio.Models.IRB120%\IRB120_3_58_G_01.rslib" RelativeLocation="..\..\..\..\..\..\..\..\..\..\Program Files (x86)\ABB\RobotStudio 2023\Packages\ABB.RobotStudio.Models.IRB120-1.1\RobotStudio\LibraryComponents\IRB120_3_58_G_01.rslib" GUID="{5F9FB8B8-3DB6-4FA0-946D-865F3D9EEECF}" />
+    <DocRef ID="1" DocumentType="ComponentLibrary" Location="%ABB.RobotStudio.Models.IRB120%\IRB120_3_58_G_01.rslib" RelativeLocation="..\..\..\..\..\..\..\..\..\..\ProgramData\ABB\DistributionPackages2\ABB.RobotStudio.Models.IRB120-1.1\RobotStudio\LibraryComponents\IRB120_3_58_G_01.rslib" GUID="{5F9FB8B8-3DB6-4FA0-946D-865F3D9EEECF}" />
     <DocRef ID="2" DocumentType="ComponentLibrary" Location="%ABBLIBRARY%\Training Objects\myTool.rslib" RelativeLocation="..\..\..\..\..\..\..\..\..\..\Program Files (x86)\ABB\RobotStudio 2023\ABB Library\Training Objects\myTool.rslib" GUID="{A3CF06C6-9F5C-4B19-884C-6700EE8891A9}" />
   </ReferencedDocuments>
 </PIMDocument>

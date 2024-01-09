@@ -2,7 +2,7 @@
 VIRTUAL_USE
 
 >>PRODUCTS_ID:
-RobotWare Version: 6.15.04.00
+RobotWare Version: 6.15.05.00
 
   RobotWare Base
   English

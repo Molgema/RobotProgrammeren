@@ -49,7 +49,7 @@ bb_populate -func pgmtbr_bb_populate
 # Initialize and enable system dump service
 sysdmp_init -max_dumps 6 -delay 100 -dir $INTERNAL/SYSDMP 
 ifvc -label VC_SKIP_SYSDMPTASK
-task -slotname sysdmpts -slotid 82 -pri 253 -vwopt 0x1c -stcks 50000 -entp sysdmpts_main -auto
+task -slotname sysdmpts -slotid 82 -pri 250 -vwopt 0x1c -stcks 50000 -entp sysdmpts_main -auto
 #VC_SKIP_SYSDMPTASK
 
 getkey -id "ASCIILogMedia" -var 10 strvar $ANSWER -errlabel NO_ASCII_LOG
@@ -796,6 +796,8 @@ sysdmp_trigger_add -name ELOG_40206 -elog_domain 4 -elog_number 206
 sysdmp_trigger_add -name ELOG_38104 -elog_domain 3 -elog_number 8104
 # Generate sysdump on "Memory Very Low"
 sysdmp_trigger_add -name ELOG_12611 -elog_domain 1 -elog_number 2611 -elog_max_dumps 1
+# Generate sysdump on "Emergency stop state"
+sysdmp_trigger_add -name ELOG_10013 -elog_domain 1 -elog_number 13
 
 # Additional log files to be copied to the sysdump
 sysdmp_add_logfile -name UPGRADE -move 0 -file "$INTERNAL/upgrade.log"

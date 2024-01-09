@@ -1,4 +1,4 @@
 <?xml version = "1.0" encoding="utf-8" ?>
 <option_registry xmlns="urn:abb-robotics-registry-option">
-<entry option="gtpuSDK" path="C:/Users/niels/AppData/Local/ABB/RobotWare/RobotWare_6.15.4023/options/gtpusdk"/>
+<entry option="gtpuSDK" path="C:/Users/Gebruiker/AppData/Local/ABB/RobotWare/RobotWare_6.15.5021/options/gtpusdk"/>
 </option_registry>

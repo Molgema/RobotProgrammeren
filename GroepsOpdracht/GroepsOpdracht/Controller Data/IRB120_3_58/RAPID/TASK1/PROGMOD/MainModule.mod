@@ -1,5 +1,6 @@
 MODULE MainModule
     !Pad Variabelen
+    CONST robtarget Target_Clock:=[[403.638935148,187.5,398.207368981],[0.438371147,0,0.898794046,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST jointtarget JointTarget_1:=[[0,0,0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST robtarget Target_10:=[[0.000039621,-0.000009983,-0.000059144],[0,-0.000000013,1,0],[-1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST robtarget Target_20:=[[62.500002181,-0.000018827,-0.00007846],[-0.000000076,-0.000000003,1,-0.000000008],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
@@ -24,13 +25,15 @@ MODULE MainModule
     PERS num sockErrorConFlag;
     VAR intnum intReset;
     VAR intnum intStop;
-    VAR num initRob := 0; 
+    VAR num initRob := 0;
+    VAR clock timer; 
+    PERS num nFlexdata{3}; 
     
     PROC main()
         IF initRob = 0 THEN
             initDO;
             state := "Idle"; 
-            startsync := TRUE; 
+            startsync := FALSE; 
             sockErrorConFlag := 0; 
             setupTrap;     
             RestoPath; 
@@ -40,9 +43,16 @@ MODULE MainModule
         TEST state 
         CASE "Idle":
         CASE "Start":
-            setupTrap; 
-            Path_10;
-            state := "Idle"; 
+            startsync := TRUE;
+            setupTrap;
+            nFlexdata{2} := 0; 
+            nFlexdata{3} := 0;
+            reg1 := 0;
+            FOR i FROM 0 TO nFlexdata{1}-1 DO 
+                Path_10;
+                nFlexdata{2}:=Progresbar(reg1,nFlexdata{1});
+            ENDFOR
+            state := "Idle";
         DEFAULT:
         ENDTEST
     ENDPROC
@@ -89,27 +99,61 @@ MODULE MainModule
         SetDO resetDO, 0;
     ENDPROC
     
+    PROC StartClock()
+        ClkReset timer;
+        ClkStart timer;
+    ENDPROC
+    
+    PROC StopClock()
+        ClkStop timer;
+        nFlexdata{3}:=nFlexdata{3} + ClkRead(timer);
+    ENDPROC
+
+    FUNC num Progresbar(num aantal,num nRotaties)
+        RETURN ((100/(19*nRotaties))*aantal);
+    ENDFUNC
     
     PROC Path_10()
-        MoveAbsJ JointTarget_1,v500,z100,MyTool\WObj:=wTable;
+        MoveAbsJ JointTarget_1,v500,fine,MyTool\WObj:=wTable;
+        MoveJSync Target_Clock,v500,fine,MyTool\WObj:=wTable,"StartClock";
+        Add reg1,1;
         MoveJ Target_10,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_20,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_30,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_40,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_50,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_60,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_70,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_80,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_90,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_100,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_110,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_120,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_130,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_140,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_150,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_160,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
         MoveJ Target_10,v500,z100,MyTool\WObj:=wTable;
-        MoveAbsJ JointTarget_1,v500,z100,MyTool\WObj:=wTable;
+        Add reg1,1;
+        MoveAbsJ JointTarget_1,v500,fine,MyTool\WObj:=wTable;
+        MoveJSync Target_Clock,v500,fine,MyTool\WObj:=wTable,"StopClock";
+        Add reg1, 1; 
     ENDPROC
     
 ENDMODULE

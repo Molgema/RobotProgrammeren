@@ -35,6 +35,14 @@ namespace ScreenGroepsOpdracht
         
         private ABB.Robotics.Tps.Windows.Forms.Led led1;
         
+        private ABB.Robotics.Tps.Windows.Forms.NumEditor numEditor1;
+        
+        private ABB.Robotics.Tps.Windows.Forms.TpsLabel tpsLabel5;
+        
+        private ABB.Robotics.Tps.Windows.Forms.DataEditor dataEditor1;
+        
+        private ABB.Robotics.Tps.Windows.Forms.TpsLabel tpsLabel6;
+        
         private ABB.Robotics.Tps.Windows.Forms.TpsLabel tpsLabel4;
         
         public MainScreen()
@@ -54,6 +62,10 @@ namespace ScreenGroepsOpdracht
             this.barGraph1 = new ABB.Robotics.Tps.Windows.Forms.BarGraph();
             this.tpsLabel4 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.led1 = new ABB.Robotics.Tps.Windows.Forms.Led();
+            this.numEditor1 = new ABB.Robotics.Tps.Windows.Forms.NumEditor();
+            this.tpsLabel5 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
+            this.dataEditor1 = new ABB.Robotics.Tps.Windows.Forms.DataEditor();
+            this.tpsLabel6 = new ABB.Robotics.Tps.Windows.Forms.TpsLabel();
             this.SuspendLayout();
             // 
             // button1
@@ -124,9 +136,11 @@ namespace ScreenGroepsOpdracht
             // 
             // barGraph1
             // 
+            this.barGraph1.DataBindings.Add(new System.Windows.Forms.Binding("Value", new ABB.Robotics.ScreenMaker.Windows.Forms.SingleBindingSource(new ABB.Robotics.DataBinding.RapidDataObject("T_ROB1", "MainModule", "nFlexdata"), new ABB.Robotics.ScreenMaker.Windows.Forms.Index[] {
+                                new ABB.Robotics.ScreenMaker.Windows.Forms.Index(2)}), "Value", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.barGraph1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.barGraph1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.barGraph1.Location = new System.Drawing.Point(211, 76);
+            this.barGraph1.Location = new System.Drawing.Point(211, 186);
             this.barGraph1.Name = "barGraph1";
             this.barGraph1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.barGraph1.Size = new System.Drawing.Size(150, 50);
@@ -135,7 +149,7 @@ namespace ScreenGroepsOpdracht
             // 
             this.tpsLabel4.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
             this.tpsLabel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tpsLabel4.Location = new System.Drawing.Point(238, 46);
+            this.tpsLabel4.Location = new System.Drawing.Point(238, 156);
             this.tpsLabel4.Multiline = true;
             this.tpsLabel4.Name = "tpsLabel4";
             this.tpsLabel4.Size = new System.Drawing.Size(100, 24);
@@ -151,9 +165,54 @@ namespace ScreenGroepsOpdracht
             this.led1.Size = new System.Drawing.Size(221, 36);
             this.led1.Text = "ERR_SOCK_TIMEOUT";
             // 
+            // numEditor1
+            // 
+            this.numEditor1.DataBindings.Add(new System.Windows.Forms.Binding("Value", new ABB.Robotics.ScreenMaker.Windows.Forms.SingleBindingSource(new ABB.Robotics.DataBinding.RapidDataObject("T_ROB1", "MainModule", "nFlexdata"), new ABB.Robotics.ScreenMaker.Windows.Forms.Index[] {
+                                new ABB.Robotics.ScreenMaker.Windows.Forms.Index(1)}), "Value", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.numEditor1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.numEditor1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.numEditor1.Location = new System.Drawing.Point(205, 76);
+            this.numEditor1.Name = "numEditor1";
+            this.numEditor1.Size = new System.Drawing.Size(160, 40);
+            // 
+            // tpsLabel5
+            // 
+            this.tpsLabel5.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tpsLabel5.Location = new System.Drawing.Point(205, 46);
+            this.tpsLabel5.Multiline = true;
+            this.tpsLabel5.Name = "tpsLabel5";
+            this.tpsLabel5.Size = new System.Drawing.Size(160, 24);
+            this.tpsLabel5.Title = "Number of paths";
+            // 
+            // dataEditor1
+            // 
+            this.dataEditor1.DataBindings.Add(new System.Windows.Forms.Binding("Text", new ABB.Robotics.ScreenMaker.Windows.Forms.SingleBindingSource(new ABB.Robotics.DataBinding.RapidDataObject("T_ROB1", "MainModule", "nFlexdata"), new ABB.Robotics.ScreenMaker.Windows.Forms.Index[] {
+                                new ABB.Robotics.ScreenMaker.Windows.Forms.Index(3)}), "Value", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.dataEditor1.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.dataEditor1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataEditor1.Location = new System.Drawing.Point(205, 298);
+            this.dataEditor1.Name = "dataEditor1";
+            this.dataEditor1.Size = new System.Drawing.Size(160, 40);
+            this.dataEditor1.Text = "#";
+            // 
+            // tpsLabel6
+            // 
+            this.tpsLabel6.Font = ABB.Robotics.Tps.Windows.Forms.TpsFont.Font12b;
+            this.tpsLabel6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tpsLabel6.Location = new System.Drawing.Point(227, 268);
+            this.tpsLabel6.Multiline = true;
+            this.tpsLabel6.Name = "tpsLabel6";
+            this.tpsLabel6.Size = new System.Drawing.Size(124, 24);
+            this.tpsLabel6.Title = "Total Runtime";
+            // 
             // MainScreen
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.tpsLabel6);
+            this.Controls.Add(this.dataEditor1);
+            this.Controls.Add(this.tpsLabel5);
+            this.Controls.Add(this.numEditor1);
             this.Controls.Add(this.led1);
             this.Controls.Add(this.tpsLabel4);
             this.Controls.Add(this.barGraph1);
@@ -172,6 +231,10 @@ namespace ScreenGroepsOpdracht
             this.Controls.SetChildIndex(this.barGraph1, 0);
             this.Controls.SetChildIndex(this.tpsLabel4, 0);
             this.Controls.SetChildIndex(this.led1, 0);
+            this.Controls.SetChildIndex(this.numEditor1, 0);
+            this.Controls.SetChildIndex(this.tpsLabel5, 0);
+            this.Controls.SetChildIndex(this.dataEditor1, 0);
+            this.Controls.SetChildIndex(this.tpsLabel6, 0);
             this.ResumeLayout(false);
         }
         #endregion

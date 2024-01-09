@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyTrademarkAttribute("")]
 [assembly: System.Reflection.AssemblyCultureAttribute("")]
 [assembly: System.Reflection.AssemblyVersionAttribute("6.13.4007")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("23.3.10550.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("23.4.10609.1")]
 [assembly: ABB.Robotics.Tps.Taf.TpsViewAttribute("ScreenGroepsOpdracht App", "tpu-Operator32.png", "tpu-Operator32.png", "TpsViewScreenGroepsOpdracht.dll", "ScreenGroepsOpdracht.MainScreen", ABB.Robotics.Tps.Taf.StartPanelLocation.Left, ABB.Robotics.Tps.Taf.TpsViewType.Static, ABB.Robotics.Tps.Taf.TpsViewStartupTypes.Manual)]
 
 
